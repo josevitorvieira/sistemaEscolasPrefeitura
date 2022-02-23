@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-import { VButtonModule } from 'src/app/components/v-button/v-button.module';
+import {InputTextModule} from 'primeng/inputtext';
+import {TableModule} from 'primeng/table';
+
+// import { VButtonModule } from 'src/app/components/v-button/v-button.module';
+import { RegisterSchoolModule } from '../register-school/register-school.module';
+
 
 @NgModule({
   declarations: [
@@ -9,7 +14,9 @@ import { VButtonModule } from 'src/app/components/v-button/v-button.module';
   ],
   imports: [
     CommonModule,
-    VButtonModule,
+    InputTextModule,
+    TableModule,
+    RegisterSchoolModule,
   ]
 })
 export class HomeModule { }
