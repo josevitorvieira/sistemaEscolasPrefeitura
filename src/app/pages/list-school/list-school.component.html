@@ -1,7 +1,6 @@
 <p-table [value]="school" class="table" responsiveLayout="scroll">
     <ng-template pTemplate="header">
         <tr>
-            <!-- <th class="notMobile">CNPJ</th> -->
             <th>Nome Escola</th>
             <th></th>
             <th></th>
@@ -10,7 +9,6 @@
     </ng-template>
     <ng-template pTemplate="body" let-school>
         <tr class="line">
-            <!-- <td id="cnpj" class="cnpj">{{school.cnpj}}</td> -->
             <td class="schoolName">{{school.schoolName}}</td>
             <td>
                 <i class="pi pi-eye mobile" (click)="classMenu(school.id)"></i>
