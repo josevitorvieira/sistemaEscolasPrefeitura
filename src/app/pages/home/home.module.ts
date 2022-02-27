@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-import {InputTextModule} from 'primeng/inputtext';
-import {TableModule} from 'primeng/table';
-
-// import { VButtonModule } from 'src/app/components/v-button/v-button.module';
+// import {InputTextModule} from 'primeng/inputtext';
+// import {TableModule} from 'primeng/table';
+import {MegaMenuModule} from 'primeng/megamenu';
 import { RegisterSchoolModule } from '../register-school/register-school.module';
-
+import { ListSchoolModule } from '../list-school/list-school.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +13,11 @@ import { RegisterSchoolModule } from '../register-school/register-school.module'
   ],
   imports: [
     CommonModule,
-    InputTextModule,
-    TableModule,
+    // InputTextModule,
+    // TableModule,
     RegisterSchoolModule,
+    MegaMenuModule,
+    ListSchoolModule
   ]
 })
 export class HomeModule { }

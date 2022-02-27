@@ -1,1 +1,22 @@
-<p>list-school works!</p>
+<p-table [value]="school" class="table">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>CNPJ</th>
+            <th>Nome</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-school>
+        <tr>
+            <td>{{school.cnpj}}</td>
+            <td class="colum">{{school.schoolName}}</td>
+            <td>
+                <button type="button" pButton label="Editar" (click)="editSchool(school.id)"></button>                
+            </td>
+            <td>
+                <button type="button" pButton label="Deletar" (click)="deleteSchool(school.id)"></button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

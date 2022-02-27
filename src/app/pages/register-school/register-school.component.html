@@ -1,2 +1,74 @@
-<h1>Nome</h1>
-<input type="text" pInputText /><br>
+<div id="generalDiv">
+    <div>
+        <h1>Cadastro de Escolas</h1>
+    </div>
+    <div class="p-fluid grid" id="divForm" [formGroup]="school"  >
+        <div class="field col-12 md:col-4" class="divInputs cnpj">
+            <span class="p-float-label">                  
+                <p-inputMask type="text" id="cnpj" formControlName="cnpj" mask="99.999.999/999-99"></p-inputMask>
+                <label for="cnpj">CNPJ</label>
+            </span>
+        </div>
+        <div class="field col-12 md:col-4" class="divInputs schoolName">
+            <span class="p-float-label">            
+                <input type="text" id="shoolName" pInputText formControlName="schoolName" class="input"> 
+                <label for="shoolName">Nome da escola</label>
+            </span>
+        </div>
+        <div formGroupName="adress" id="divFormAdress">
+            <div class="field col-12 md:col-4" class="divInputs street">
+                <span class="p-float-label">            
+                    <input type="text" id="adress" pInputText formControlName="street" class="input"> 
+                    <label for="adress">Rua</label>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4" class="divInputs schoolNumber">
+                <span class="p-float-label">            
+                    <input type="text" id="numberOfAdress" pInputText formControlName="numberOfAdress" class="input"> 
+                    <label for="numberOfAdress">Número</label>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4" class="divInputs district">
+                <span class="p-float-label">            
+                    <input type="text" id="district" pInputText formControlName="district" class="input"> 
+                    <label for="district">Bairro</label>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4 zipCode" class="divInputs zipCode">
+                <span class="p-float-label">                  
+                    <p-inputMask type="text" id="zipCode" formControlName="zipCode" mask="99999-999"></p-inputMask>
+                    <label for="zipCode">Cep</label>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4" class="divInputs city">
+                <span class="p-float-label">            
+                    <input type="text" id="city" pInputText formControlName="city" class="input"> 
+                    <label for="city">Cidade</label>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4" class="divInputs state">
+                <span class="p-float-label">            
+                    <input type="text" id="state" pInputText formControlName="state" class="input"> 
+                    <label for="state">Estado</label>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4" class="divInputs country">
+                <span class="p-float-label">            
+                    <input type="text" id="country" pInputText formControlName="country" class="input"> 
+                    <label for="country">Pais</label>
+                </span>
+            </div>
+        </div>    
+        <div class="field col-12 md:col-4" class="divInputs phone">
+            <span class="p-float-label">            
+                <!-- <input type="text" id="phone" class="input" pInputText formControlName="phone" >  -->
+                <p-inputMask type="text" id="phone" class="input" formControlName="phone" mask="(99)99999-9999"></p-inputMask>
+                <label for="phone">Telefone</label>
+            </span>
+        </div>
+    </div>
+    <div id="submitButton" >
+        <button type="button" pButton label="Criar" (click)="createSchool()" *ngIf="!idUpdate"></button>
+        <button type="button" pButton label="Salvar" (click)="updateSchool(idUpdate, school)" *ngIf="idUpdate"></button>   
+    </div> 
+</div>

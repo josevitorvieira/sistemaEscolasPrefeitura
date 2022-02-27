@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { HomeModule } from './pages/home/home.module';
 import { ListClassModule } from './pages/list-class/list-class.module';
 import { ListSchoolModule } from './pages/list-school/list-school.module';
@@ -26,7 +27,8 @@ import { RegisterStudentModule } from './pages/register-student/register-student
     ListClassModule,
     RegisterStudentModule,
     ListStudentModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

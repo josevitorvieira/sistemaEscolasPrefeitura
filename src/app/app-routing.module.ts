@@ -19,7 +19,11 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: "registerScholl",
+    path: "registerSchool",
+    component: RegisterSchoolComponent
+  },
+  {
+    path: "registerSchool/:id",
     component: RegisterSchoolComponent
   },
   {

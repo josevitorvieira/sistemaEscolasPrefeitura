@@ -1,0 +1,82 @@
+#generalDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(233, 230, 221);
+    width: 1000;
+    height: 100%;
+}
+
+#submitButton{
+    display: flex;
+    align-items:flex-start;
+    margin: 10px;
+}
+
+#zipCode{
+    width: 700px;
+    height: 20px;
+    border-radius: 30px; 
+}
+
+#divForm{
+    display: grid;    
+    gap: 5px 10px;
+    grid-template: 
+    "cnpj cnpj schoolName schoolName schoolName"
+    "formAdress formAdress formAdress formAdress formAdress"
+    "phone phone email email empty"
+    ;
+}
+
+#divFormAdress{
+    display: grid;
+    grid-area: formAdress;
+    gap: 5px 10px;
+    grid-template: 
+    "street street street street schoolNumber"
+    "zipCode district district city city"
+    "state state country country country"
+    ;
+    width: 100%;
+}
+
+.schoolName{
+    grid-area: schoolName;
+}
+
+.cnpj{
+    grid-area: cnpj;
+}
+
+.street{
+    grid-area: street;
+}
+
+.schoolNumber{
+    grid-area: schoolNumber;
+}
+
+.zipCode{
+    grid-area: zipCode;
+}
+
+.district{
+    grid-area: district;
+}
+
+.city{
+    grid-area: city;
+}
+
+.state{
+    grid-area: state;
+}
+
+.country{
+    grid-area: country;
+}
+
+.phone{
+    grid-area: phone;
+}
