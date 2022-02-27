@@ -35,7 +35,6 @@ export class RegisterClassComponent implements OnInit {
   })
 
   constructor(
-    // private readonly route: Router
     private readonly activateRoute: ActivatedRoute,
     private readonly http: HttpClient,
     private readonly route: Router
