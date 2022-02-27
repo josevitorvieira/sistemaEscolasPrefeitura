@@ -1,0 +1,42 @@
+<div id="generalDiv">
+    <div>
+        <h1>Cadastro de Turmas</h1>
+    </div>
+    <div class="p-fluid grid" id="divForm" [formGroup]="classes"  >
+        <div class="field col-12 md:col-4" class="divInputs grade">
+            <span class="p-float-label">            
+                <input type="text" id="grade" pInputText formControlName="grade" class="input"> 
+                <label for="grade">Serie</label>
+            </span>
+        </div>
+        <div class="field col-12 md:col-4" class="divInputs gradeClass">
+            <span class="p-float-label">            
+                <input type="text" id="gradeClass" pInputText formControlName="gradeClass" class="input"> 
+                <label for="gradeClass">Turma</label>
+            </span>
+        </div>
+        <div class="field col-12 md:col-4" class="divInputs period">
+            <span class="p-float-label">            
+                <input type="text" id="period" pInputText formControlName="period" class="input"> 
+                <label for="period">Turno</label>
+            </span>
+        </div>
+        <div class="field col-12 md:col-4" class="divInputs studentQuantity">
+            <span class="p-float-label">            
+                <input type="text" id="studentQuantity" pInputText formControlName="studentQuantity" class="input"> 
+                <label for="studentQuantity">Quantidade de Alunos</label>
+            </span>
+        </div>
+        <div class="field col-12 md:col-4" class="divInputs maxAmount">
+            <span class="p-float-label">            
+                <input type="text" id="maxAmount" pInputText formControlName="maxAmount" class="input"> 
+                <label for="maxAmount">Capacidade da Turma</label>
+            </span>
+        </div>
+    </div>
+    <div id="submitButton" >
+        <button type="button" pButton label="Criar" (click)="createClass()" *ngIf="!idUpdate" class="submitButton"></button>
+        <button type="button" pButton label="Retornar" (click)="goTo('listClass/' + idSchool)" class="submitButton"></button>
+        <!-- <button type="button" pButton label="Salvar" (click)="updateSchool(idUpdate, school)" *ngIf="idUpdate" class="submitButton"></button>    -->
+    </div> 
+</div>

@@ -1,0 +1,47 @@
+.submitButton{
+    margin: 10px;
+}
+
+#divForm{
+    display: grid;
+    gap: 25px 10px;
+    grid-template: 
+    "grade gradeClass"
+    "period period"
+    "studentQuantity maxAmount"
+    ;
+}
+
+.grade{
+    grid-area: grade;
+}
+
+.gradeClass{
+    grid-area: gradeClass;
+}
+
+.period{
+    grid-area: period;
+}
+
+.studentQuantity{
+    grid-area: studentQuantity;
+}
+
+.maxAmount{
+    grid-area: maxAmount;
+}
+
+@media(max-width: 768px){
+    
+    #divForm{
+        padding: 5px;
+        grid-template: 
+        "grade"
+        "gradeClass"
+        "period"
+        "studentQuantity"
+        "maxAmount"
+        ;
+    }  
+}

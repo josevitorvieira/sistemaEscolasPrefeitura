@@ -3,11 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ListClassComponent } from './pages/list-class/list-class.component';
 import { ListSchoolComponent } from './pages/list-school/list-school.component';
-import { ListStudentComponent } from './pages/list-student/list-student.component';
+import { RegisterClassComponent } from './pages/register-class/register-class.component';
 import { RegisterClassModule } from './pages/register-class/register-class.module';
 import { RegisterSchoolComponent } from './pages/register-school/register-school.component';
-import { RegisterStudentModule } from './pages/register-student/register-student.module';
-
 
 const routes: Routes = [
   {
@@ -31,22 +29,13 @@ const routes: Routes = [
     component: ListSchoolComponent
   },
   {
-    path: "registerClass",
-    component: RegisterClassModule
+    path: "registerClass/:idSchool",
+    component: RegisterClassComponent
   },
   {
-    path: "listClass",
+    path: "listClass/:id",
     component: ListClassComponent
   },
-  {
-    path: "registerStudent",
-    component: RegisterStudentModule
-  },
-  {
-    path: "listStudent",
-    component: ListStudentComponent
-  }
-
 ];
 
 @NgModule({

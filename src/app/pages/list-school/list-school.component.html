@@ -1,21 +1,28 @@
-<p-table [value]="school" class="table">
+<p-table [value]="school" class="table" responsiveLayout="scroll">
     <ng-template pTemplate="header">
         <tr>
-            <th>CNPJ</th>
-            <th>Nome</th>
+            <!-- <th class="notMobile">CNPJ</th> -->
+            <th>Nome Escola</th>
+            <th></th>
             <th></th>
             <th></th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-school>
-        <tr>
-            <td>{{school.cnpj}}</td>
-            <td class="colum">{{school.schoolName}}</td>
+        <tr class="line">
+            <!-- <td id="cnpj" class="cnpj">{{school.cnpj}}</td> -->
+            <td class="schoolName">{{school.schoolName}}</td>
             <td>
-                <button type="button" pButton label="Editar" (click)="editSchool(school.id)"></button>                
+                <i class="pi pi-eye mobile" (click)="classMenu(school.id)"></i>
+                <button type="button" pButton label="Turmas" (click)="classMenu(school.id)" class="classes notMobile"></button>
             </td>
             <td>
-                <button type="button" pButton label="Deletar" (click)="deleteSchool(school.id)"></button>
+                <i class="pi pi-pencil mobile" (click)="editSchool(school.id)"></i>                
+                <button type="button" pButton label="Editar" (click)="editSchool(school.id)" class="edit notMobile"></button>                
+            </td>
+            <td>
+                <i class="pi pi-trash mobile" (click)="deleteSchool(school.id)"></i>                
+                <button type="button" pButton label="Deletar" (click)="deleteSchool(school.id)" class="delete notMobile"></button>
             </td>
         </tr>
     </ng-template>

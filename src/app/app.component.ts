@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SistemaEscolarPublicas';
+
+  public menu = [
+    {
+      label: 'Menu',
+      items: [
+          [
+              {
+                  label: 'Escolas',
+                  items: [
+                  {label: 'Cadastar', routerLink: ['/registerSchool']},
+                   {label: 'Listar', routerLink: ['/listSchool']}],                  
+              }
+          ]
+      ]        
+    }
+  ]
 }

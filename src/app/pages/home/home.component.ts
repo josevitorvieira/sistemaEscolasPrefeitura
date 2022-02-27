@@ -18,19 +18,19 @@ export class HomeComponent implements OnInit {
   //   }  
   // ]
 
-  public items = [
-    {
-      label: 'Menu',
-      items: [
-          [
-              {
-                  label: 'Escolas',
-                  items: [{label: 'Cadastar'}, {label: 'Listar'}]
-              }
-          ]
-      ]        
-    }
-  ]  
+  // public items = [
+  //   {
+  //     label: 'Menu',
+  //     items: [
+  //         [
+  //             {
+  //                 label: 'Escolas',
+  //                 items: [{label: 'Cadastar'}, {label: 'Listar'}]
+  //             }
+  //         ]
+  //     ]        
+  //   }
+  // ]  
 
   constructor() { }
 

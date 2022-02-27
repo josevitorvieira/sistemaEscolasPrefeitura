@@ -28,16 +28,16 @@
                     <label for="numberOfAdress">Número</label>
                 </span>
             </div>
-            <div class="field col-12 md:col-4" class="divInputs district">
-                <span class="p-float-label">            
-                    <input type="text" id="district" pInputText formControlName="district" class="input"> 
-                    <label for="district">Bairro</label>
-                </span>
-            </div>
             <div class="field col-12 md:col-4 zipCode" class="divInputs zipCode">
                 <span class="p-float-label">                  
                     <p-inputMask type="text" id="zipCode" formControlName="zipCode" mask="99999-999"></p-inputMask>
                     <label for="zipCode">Cep</label>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4" class="divInputs district">
+                <span class="p-float-label">            
+                    <input type="text" id="district" pInputText formControlName="district" class="input"> 
+                    <label for="district">Bairro</label>
                 </span>
             </div>
             <div class="field col-12 md:col-4" class="divInputs city">
@@ -67,8 +67,9 @@
             </span>
         </div>
     </div>
-    <div id="submitButton" >
-        <button type="button" pButton label="Criar" (click)="createSchool()" *ngIf="!idUpdate"></button>
-        <button type="button" pButton label="Salvar" (click)="updateSchool(idUpdate, school)" *ngIf="idUpdate"></button>   
+    <div class="submitButton" >
+        <button type="button" pButton label="Criar" (click)="createSchool()" *ngIf="!idUpdate" class="submitButton"></button>
+        <button type="button" pButton label="Salvar" (click)="updateSchool(idUpdate, school)" *ngIf="idUpdate" class="submitButton"></button>   
+        <button type="button" pButton label="Retornar" (click)="goTo('listSchool')" class="submitButton"></button>
     </div> 
 </div>

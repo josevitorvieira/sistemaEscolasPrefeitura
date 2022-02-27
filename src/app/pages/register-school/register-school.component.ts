@@ -32,9 +32,7 @@ export class RegisterSchoolComponent implements OnInit {
     private readonly http: HttpClient,
     private readonly activateRoute: ActivatedRoute,
     private readonly route: Router
-  ){
-
-  }
+  ){}
   
   ngOnInit(): void {
     this.recoveryId()
@@ -56,8 +54,6 @@ export class RegisterSchoolComponent implements OnInit {
   }
 
   async updateSchool(id: string | null, school: any){
-    console.log({id,school});
-    
     const response = this.http.put(`http://localhost:3000/schools/${id}`, school.value)
       .subscribe(()=>{
         this.route.navigate(['/listSchool']);
@@ -72,4 +68,7 @@ export class RegisterSchoolComponent implements OnInit {
     }
   }
 
+  goTo(path: string) {
+    this.route.navigate([`/${path}`]);
+  }
 }

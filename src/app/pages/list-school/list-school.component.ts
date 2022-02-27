@@ -22,21 +22,22 @@ export class ListSchoolComponent implements OnInit {
 
   getSchools(){
     const response = this.http.get("http://localhost:3000/schools").subscribe((result)=>{
-      console.log(result);
       this.school = result        
     });
   }
 
   deleteSchool(id: number){
     const response = this.http.delete(`http://localhost:3000/schools/${id}`).subscribe((result)=>{
-      console.log(result);
-      this.school = result
       this.getSchools();        
     });
   }
 
   editSchool(id: number){
     this.route.navigate([`/registerSchool/${id}`]);
+  }
+
+  classMenu(id: string){
+    this.route.navigate([`/listClass/${id}`]);
   }
 
 

@@ -1,1 +1,31 @@
-<p>list-class works!</p>
+<p-table [value]="classes" class="table">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Escola</th>
+            <th>Ano</th>
+            <th>Turma</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-classes>
+        <tr id="line">
+            <td>{{ classes.schoolName }}</td>
+            <td>{{ classes.grade }}</td>
+            <td>{{ classes.class }}</td>
+            <td>
+                <i class="pi pi-pencil mobile"></i>
+                <button type="button" pButton label="Editar" class="notMobile"></button>                
+            </td>
+            <td>
+                <i class="pi pi-trash mobile" (click)="deleteClass(classes.id)"></i>                
+                <button type="button" pButton label="Deletar" (click)="deleteClass(classes.id)" class="notMobile"></button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+<div>
+    <button type="button" pButton label="Cadastrar Turma" (click)="createClassRoute()" class="createClass"></button>
+</div>
+    
+

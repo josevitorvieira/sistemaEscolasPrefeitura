@@ -1,4 +1,56 @@
 {
-  "schools": [],
-  "class": []
+  "schools": [
+    {
+      "cnpj": "11.111.111/111-11",
+      "schoolName": "FERREIRA",
+      "adress": {
+        "street": null,
+        "numberOfAdress": null,
+        "district": null,
+        "zipCode": null,
+        "city": null,
+        "state": null,
+        "country": null
+      },
+      "phone": null,
+      "id": 1
+    },
+    {
+      "cnpj": "33.333.333/333-33",
+      "schoolName": "José",
+      "adress": {
+        "street": "ccccccc",
+        "numberOfAdress": "ccccccccc",
+        "district": "ccccccccc",
+        "zipCode": "33333-333",
+        "city": "ccccccccc",
+        "state": "ccccccccc",
+        "country": "cccccccccc"
+      },
+      "phone": "(33)33333-3333",
+      "id": 3
+    }
+  ],
+  "classes": [
+    {
+      "idSchool": "1",
+      "schoolName": "aaaaaaaaaaaaaa",
+      "grade": "aaaaaaaaa",
+      "class": "aaaaaaaaaaaa",
+      "period": "aaaaaaaaa",
+      "studentQuantity": "aaaaaaaaa",
+      "maxAmount": "aaaaaaaaaaaaaaa",
+      "id": 5
+    },
+    {
+      "idSchool": "3",
+      "schoolName": "José",
+      "grade": "5",
+      "class": null,
+      "period": "VESPERTINO",
+      "studentQuantity": "34",
+      "maxAmount": "40",
+      "id": 7
+    }
+  ]
 }

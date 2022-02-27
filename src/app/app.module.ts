@@ -8,10 +8,9 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './pages/home/home.module';
 import { ListClassModule } from './pages/list-class/list-class.module';
 import { ListSchoolModule } from './pages/list-school/list-school.module';
-import { ListStudentModule } from './pages/list-student/list-student.module';
 import { RegisterClassModule } from './pages/register-class/register-class.module';
 import { RegisterSchoolModule } from './pages/register-school/register-school.module';
-import { RegisterStudentModule } from './pages/register-student/register-student.module';
+import {MegaMenuModule} from 'primeng/megamenu';
 
 @NgModule({
   declarations: [
@@ -25,10 +24,10 @@ import { RegisterStudentModule } from './pages/register-student/register-student
     ListSchoolModule,
     RegisterClassModule,
     ListClassModule,
-    RegisterStudentModule,
-    ListStudentModule,
     FormsModule,
     HttpClientModule,
+    MegaMenuModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

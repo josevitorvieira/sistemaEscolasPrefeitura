@@ -1,0 +1,40 @@
+// .cnpj{
+//     grid-area: cnpj;
+// }
+.schoolName{
+    grid-area: schoolName;
+}
+.classes{
+    grid-area: classes;
+}
+.edit{
+    grid-area: edit;
+}
+.delete{
+    grid-area: delete;
+}
+
+@media(min-width: 768px){
+    .mobile{
+        display: none;
+    }
+}
+
+@media(max-width: 768px){
+    .table{
+        overflow: x;
+        margin: 0;
+    }
+    .line{
+        width: 100vw;
+        display: grid;
+        grid-template: 
+        "schoolName classes edit delete"
+        / 60% 13.3% 13.3% 13.3%
+        ;
+    }        
+
+    .notMobile {
+        display: none;
+    }
+}

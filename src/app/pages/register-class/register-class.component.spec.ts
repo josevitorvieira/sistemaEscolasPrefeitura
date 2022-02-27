@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VButtonComponent } from './v-button.component';
+import { RegisterClassComponent } from './register-class.component';
 
-describe('VButtonComponent', () => {
-  let component: VButtonComponent;
-  let fixture: ComponentFixture<VButtonComponent>;
+describe('RegisterClassComponent', () => {
+  let component: RegisterClassComponent;
+  let fixture: ComponentFixture<RegisterClassComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VButtonComponent ]
+      declarations: [ RegisterClassComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VButtonComponent);
+    fixture = TestBed.createComponent(RegisterClassComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
